@@ -1,0 +1,16 @@
+enum TransitionType {
+  fade,
+  slideRightToLeft,
+  slideLeftToRight,
+  slideTopToBottom,
+  slideBottomToTop,
+  scale,
+  rotation,
+  size,
+  flip,
+  rotateAndScale,
+  customCurve,
+  bounce,
+  elastic,
+  zoomIn,
+}
