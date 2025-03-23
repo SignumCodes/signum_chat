@@ -5,5 +5,5 @@ class AppRoute {
   static const signup = '/signup';
   static const home = '/home';
   static const profile = '/profile';
-  static const startChat = '/home/profile';
+  static const chatScreen = '/home/chat';
 }

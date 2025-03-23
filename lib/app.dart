@@ -46,8 +46,9 @@ class MyApp extends StatelessWidget {
                 primaryColor: AppColors.primaryColor,
                 hintColor: AppColors.secondaryColor,
               ),
-              initialRoute: AppRoute.splash,
-              onGenerateRoute: (RouteSettings setting) => AppNavigator.routeSetting(setting),
+            navigatorKey: AppNavigator.navigatorKey, // Use global key for navigation
+            onGenerateRoute: AppNavigator.routeSetting,
+            initialRoute: AppRoute.splash
             );
           },
         );

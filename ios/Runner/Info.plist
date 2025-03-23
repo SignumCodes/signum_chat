@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Bloc Mvvm Base App</string>
+	<string>Signum Chat</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>bloc_mvvm_base_app</string>
+	<string>Signum Chat</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -45,5 +45,21 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<!-- Microphone permission -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app needs access to microphone to record voice messages</string>
+
+    <!-- If you store recordings locally -->
+    <key>NSDocumentsDirectoryUsageDescription</key>
+    <string>This app needs access to documents directory to store voice recordings</string>
+
+    <!-- If your app also uses camera for the image sending feature -->
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs access to camera to send photos</string>
+
+    <!-- If your app accesses photo library for the image sending feature -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs access to photo library to send photos</string>
 </dict>
 </plist>

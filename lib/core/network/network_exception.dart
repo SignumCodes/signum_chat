@@ -55,6 +55,9 @@ class NetworkException implements DioException {
       stackTrace: stackTrace ?? this.stackTrace,
     );
   }
+
+  @override
+  DioExceptionReadableStringBuilder? stringBuilder;
 }
 
 /// Represents there's no internet connection

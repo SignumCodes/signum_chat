@@ -1,5 +1,8 @@
 plugins {
     id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -12,6 +15,8 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+
     }
 
     kotlinOptions {
@@ -20,18 +25,25 @@ android {
 
     defaultConfig {
         applicationId = "com.signumcode.chat"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        minSdkVersion 24
+        targetSdk = 35//flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
         }
     }
 }
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.3"
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'}
 
 flutter {
     source = "../.."
